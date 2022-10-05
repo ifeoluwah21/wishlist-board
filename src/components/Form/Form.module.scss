@@ -1,0 +1,36 @@
+.form {
+  &-control {
+    width: 90%;
+    padding: 1rem 0;
+    input {
+      border: none;
+      background-color: #c4fcef;
+      color: #4b4453;
+      width: 100%;
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      &::placeholder {
+        font-size: 1rem;
+        color: #4b4453;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &-action {
+    margin: 1rem 0;
+    button {
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      color: #4b4453;
+      font-size: 1rem;
+      font-family: inherit;
+      font-weight: 700;
+    }
+  }
+}

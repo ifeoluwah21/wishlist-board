@@ -1,13 +1,20 @@
-import { useState } from 'react';
-import './App.scss'
+
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import './App.scss';
+import Groceries from './pages/Groceries';
+import GroceriesItemEdit from './pages/GroceriesItemEdit';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-      Hello World!!
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Navigate replace to={"/groceries"} />} />
+
+        <Route path='/groceries/*' element={<Groceries />} />
+
+        <Route path='/groceries/:id' element={<GroceriesItemEdit />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
